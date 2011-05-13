@@ -16,7 +16,7 @@
 =end
 
 require 'pp'
-require 'active_record/connection_adapters/abstract_adapter'
+#require 'active_record/connection_adapters/abstract_adapter'
 
 
 module ActiveRecord  

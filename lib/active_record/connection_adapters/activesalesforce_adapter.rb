@@ -15,24 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =end
 
-require 'thread'  
-require 'benchmark'
-
-require 'active_record'
-require 'active_record/connection_adapters/abstract_adapter'
-
-require File.dirname(__FILE__) + '/rforce'
-require File.dirname(__FILE__) + '/column_definition'
-require File.dirname(__FILE__) + '/relationship_definition'
-require File.dirname(__FILE__) + '/boxcar_command'
-require File.dirname(__FILE__) + '/entity_definition'
-require File.dirname(__FILE__) + '/asf_active_record'
-require File.dirname(__FILE__) + '/id_resolver'
-require File.dirname(__FILE__) + '/sid_authentication_filter'
-require File.dirname(__FILE__) + '/recording_binding'
-require File.dirname(__FILE__) + '/result_array'
-
-module ActiveRecord    
+module ActiveRecord
   class Base   
     @@cache = {}
     
