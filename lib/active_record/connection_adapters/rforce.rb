@@ -103,13 +103,13 @@ module RForce
 
         case elements[name]
           #The most common case: unique child element tags.
-        when NilClass: elements[name] = parse(e)
+        when NilClass then elements[name] = parse(e)
 
           #Non-unique child elements become arrays:
 
           #We've already created the array: just
           #add the element.
-        when Array: elements[name] << parse(e)
+        when Array then elements[name] << parse(e)
 
           #We haven't created the array yet: do so,
           #then put the existing element in, followed
@@ -284,7 +284,7 @@ module RForce
 
       # decode gzip
       case encoding.strip
-      when 'gzip':
+      when 'gzip' then
         begin
           gzr = Zlib::GzipReader.new(StringIO.new(response.body))
           decoded = gzr.read
